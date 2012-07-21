@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Hello world ~ Chan9ry .ian]]></title>
-  <link href="http://wcweb.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Life, | Hello world ~ Chan9ry .ian]]></title>
+  <link href="http://wcweb.github.com/blog/categories/life-/atom.xml" rel="self"/>
   <link href="http://wcweb.github.com/"/>
   <updated>2012-07-21T10:02:01+08:00</updated>
   <id>http://wcweb.github.com/</id>
@@ -12,17 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[ My First Jquery plugin ]]></title>
-    <link href="http://wcweb.github.com/blog/2012/07/21/my-first-jquery-plugin/"/>
-    <updated>2012-07-21T10:01:00+08:00</updated>
-    <id>http://wcweb.github.com/blog/2012/07/21/my-first-jquery-plugin</id>
-    <content type="html"><![CDATA[<h1>My First Jquery plugin</h1>
-
-<p><a href="https://github.com/wcweb/stupid">https://github.com/wcweb/stupid</a></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[ hello world ]]></title>
