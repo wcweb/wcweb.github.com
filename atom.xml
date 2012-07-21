@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Hello world ~ Chan9ry .ian]]></title>
   <link href="http://wcweb.github.com/atom.xml" rel="self"/>
   <link href="http://wcweb.github.com/"/>
-  <updated>2012-07-21T08:32:39+08:00</updated>
+  <updated>2012-07-21T08:56:45+08:00</updated>
   <id>http://wcweb.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
-    
+    <name><![CDATA[Chan9ry .ian]]></name>
+    <email><![CDATA[wchr35@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
