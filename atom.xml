@@ -4,7 +4,7 @@
   <title><![CDATA[Hello world ~ Chan9ry .ian]]></title>
   <link href="http://wcweb.github.com/atom.xml" rel="self"/>
   <link href="http://wcweb.github.com/"/>
-  <updated>2012-07-21T10:02:01+08:00</updated>
+  <updated>2012-07-21T10:03:43+08:00</updated>
   <id>http://wcweb.github.com/</id>
   <author>
     <name><![CDATA[Chan9ry .ian]]></name>
@@ -18,7 +18,7 @@
     <link href="http://wcweb.github.com/blog/2012/07/21/my-first-jquery-plugin/"/>
     <updated>2012-07-21T10:01:00+08:00</updated>
     <id>http://wcweb.github.com/blog/2012/07/21/my-first-jquery-plugin</id>
-    <content type="html"><![CDATA[<h1>My First Jquery plugin</h1>
+    <content type="html"><![CDATA[<blockquote><p>this plugin is only use for student-teacher behave analysis.</p></blockquote>
 
 <p><a href="https://github.com/wcweb/stupid">https://github.com/wcweb/stupid</a></p>
 ]]></content>
