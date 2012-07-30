@@ -4,7 +4,7 @@
   <title><![CDATA[Hello world ~ Chan9ry .ian]]></title>
   <link href="http://wcweb.github.com/atom.xml" rel="self"/>
   <link href="http://wcweb.github.com/"/>
-  <updated>2012-07-21T10:03:43+08:00</updated>
+  <updated>2012-07-30T19:10:21+08:00</updated>
   <id>http://wcweb.github.com/</id>
   <author>
     <name><![CDATA[Chan9ry .ian]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mr.Bean in olimpiadas londres 201]]></title>
+    <link href="http://wcweb.github.com/blog/2012/07/30/mr-dot-bean-in-olimpiadas-londres-201/"/>
+    <updated>2012-07-30T18:56:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2012/07/30/mr-dot-bean-in-olimpiadas-londres-201</id>
+    <content type="html"><![CDATA[<p><video width='640' height='360' preload='none' controls poster=''><source src='http://wcweb.github.com/medias/videos/mr_bean_olimpiadas_londres_2012_640x360.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/></video></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ My First Jquery plugin ]]></title>
