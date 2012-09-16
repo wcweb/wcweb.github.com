@@ -1,0 +1,344 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>install ruby on rails with RVM in my ppc Leopard - Hello world ~ Chan9ry .ian</title>
+	<meta name="author" content="Chan9ry .ian">
+
+	
+	<meta name="description" content="RVM install question: 1, make sure you have git
+tar -xjf git-1.7.3.4.tar.bz2
+cd git-1.7.3.4
+make prefix=/usr/local
+sudo make prefix=/usr/local &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Hello world ~ Chan9ry .ian" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Hello world ~ Chan9ry .ian</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:wcweb.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		<a class="google" href="https://plus.google.com/101051351026677674439?rel=author" title="Google+">Google+</a>
+		
+		
+		
+		<a class="github" href="https://github.com/wcweb" title="GitHub">GitHub</a>
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:wcweb.github.com">
+	</form>
+</nav>
+
+</header>
+	
+		
+	
+	<div id="content" class="inner"><article class="post">
+	<h1 class="title">Install Ruby on Rails With RVM in My Ppc Leopard</h1>
+	<div class="entry-content"><p>RVM install question:</p>
+
+
+
+
+<p>1, make sure you have git
+<pre>tar -xjf git-1.7.3.4.tar.bz2</pre>
+<pre>cd git-1.7.3.4</pre>
+<pre>make prefix=/usr/local</pre>
+<pre>sudo make prefix=/usr/local install</pre>
+<pre>git --version</pre>
+<pre></pre>
+<pre>ref:  http://shiningthrough.co.uk/Installing-Git-on-PPC-Mac-OS-X-Leopard</pre>
+<pre></pre>
+<pre>2,fix the mess of ruby,gem version</pre>
+<pre>most easy way is to rename these two file :</pre>
+<pre>sudo rm /usr/bin/ruby
+sudo rm /usr/bin/gem</pre>
+<pre>ref:http://blog.carlmercier.com/2007/12/14/how-to-fix-that-rubygems-mess-on-leopard/</pre>
+<pre></pre>
+3,curl.
+<pre>curl: (60) SSL certificate problem, verify that the CA cert is OK. Details:
+error:14090086:SSL routines:SSL3_GET_SERVER_CERTIFICATE:certificate verify failed</pre>
+solved : in &#8220;$user ~/.rvm/scripts/fetch &#8220;file  find  curl in if else  add -k;</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>4,install path</p>
+
+
+
+
+<p>take attention to the path:</p>
+
+
+
+
+<p>such like</p>
+
+
+
+
+<p>which ruby</p>
+
+
+
+
+<p>which gem</p>
+
+
+
+
+<p>which rails</p>
+
+
+
+
+<p>~/.rvm/</p>
+
+
+
+
+<p>/usr/local</p>
+
+
+
+
+<p>/usr/local/bin</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>5,</p>
+
+
+
+
+<p>rvm install 1.9.2</p>
+
+
+
+
+<p>rvm  list</p>
+
+
+
+
+<p>rvm use rubyXXXX</p>
+
+
+
+
+<p>rvm &#8211;create  use 1.9.2@rails3</p>
+
+
+
+
+<p>rvm &#8211;default (above)</p>
+
+
+
+
+<p>which gem?</p>
+
+
+
+
+<p>gem install rails</p>
+
+
+
+
+<p>6,befor install rails3</p>
+
+
+
+
+<p>make sure you have install sqlit 3.6 and sqlite3-dev,  because gem sqlite need.</p>
+
+
+
+
+<p>7,</p>
+
+
+
+
+<p>rails create Path/name</p>
+
+
+
+
+<p>get into application path</p>
+
+
+
+
+<p>bundle install</p>
+
+
+
+
+<p>gem install sqlit    // this is newer name  of sqlite3-ruby</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>8,rake</p>
+
+
+
+
+<p>use:</p>
+
+
+
+
+<p>bundle exec ( rake -t )   //new rake use this  comand</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+<p>enjoy youself</p>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-02T00:00:00+08:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2011</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/code/'>code</a>
+
+
+</div>
+	
+</div></article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2012
+
+    Chan9ry .ian
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-24404550-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+
+</body>
+</html>

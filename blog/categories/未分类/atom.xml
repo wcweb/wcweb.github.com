@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 未分类 | Hello world ~ Chan9ry .ian]]></title>
+  <link href="http://wcweb.github.com/blog/categories/未分类/atom.xml" rel="self"/>
+  <link href="http://wcweb.github.com/"/>
+  <updated>2012-09-16T17:34:13+08:00</updated>
+  <id>http://wcweb.github.com/</id>
+  <author>
+    <name><![CDATA[Chan9ry .ian]]></name>
+    <email><![CDATA[wchr35@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[video player [UI]]]></title>
+    <link href="http://wcweb.github.com/blog/2012/02/07/video-player-ui/"/>
+    <updated>2012-02-07T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2012/02/07/video-player-ui</id>
+    <content type="html"><![CDATA[<p><a href="http://wcweb.us/wordpress/wp-content/uploads/2011/11/info.png"><img src="http://wcweb.us/wordpress/wp-content/uploads/2011/11/info-300x180.png" alt="" title="info" width="300" height="180" class="aligncenter size-medium wp-image-344" /></a><a href="http://wcweb.us/wordpress/wp-content/uploads/2011/11/tv2.png"><img src="http://wcweb.us/wordpress/wp-content/uploads/2011/11/tv2-300x180.png" alt="" title="tv2" width="300" height="180" class="aligncenter size-medium wp-image-345" /></a><a href="http://wcweb.us/wordpress/wp-content/uploads/2011/11/front.png"><img src="http://wcweb.us/wordpress/wp-content/uploads/2011/11/front-300x180.png" alt="" title="front" width="300" height="180" class="aligncenter size-medium wp-image-342" /></a></p>
+
+]]></content>
+  </entry>
+  
+</feed>

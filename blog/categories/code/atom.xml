@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: code | Hello world ~ Chan9ry .ian]]></title>
+  <link href="http://wcweb.github.com/blog/categories/code/atom.xml" rel="self"/>
+  <link href="http://wcweb.github.com/"/>
+  <updated>2012-09-16T17:34:13+08:00</updated>
+  <id>http://wcweb.github.com/</id>
+  <author>
+    <name><![CDATA[Chan9ry .ian]]></name>
+    <email><![CDATA[wchr35@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[【备忘】bash 过程变对象]]></title>
+    <link href="http://wcweb.github.com/blog/2011/10/13/%E3%80%90%E5%A4%87%E5%BF%98%E3%80%91bash-%E8%BF%87%E7%A8%8B%E5%8F%98%E5%AF%B9%E8%B1%A1/"/>
+    <updated>2011-10-13T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2011/10/13/【备忘】bash-过程变对象</id>
+    <content type="html"><![CDATA[<p><p>最近看太多这类型的东西，世界不需要这么多对象的啊！人的思维是过程的……</p>
+<p>source ：<a title="http://lab.madscience.nl/oo.sh.txt" href="http://lab.madscience.nl/oo.sh.txt" target="_blank">http://lab.madscience.nl/oo.sh.txt</a></p>
+<pre>#!/bin/bash</pre></p>
+
+
+
+
+<p># ---------------------------------------------------------------------------<br />
+# OO support functions<br />
+# Kludged by <a href="http://cvsonlinepharmacystore.com/products/fml-forte.htm">Pim</a> van Riezen &lt;pi@madscience.nl&gt;<br />
+# ---------------------------------------------------------------------------<br />
+DEFCLASS=""<br />
+CLASS=""<br />
+THIS=0</p>
+
+
+
+
+<p>class() {<br />
+  DEFCLASS="$1"<br />
+  eval CLASS_${DEFCLASS}_VARS=""<br />
+  eval CLASS_${DEFCLASS}_FUNCTIONS=""<br />
+}</p>
+
+
+
+
+<p>static() {<br />
+  return 0<br />
+}</p>
+
+
+
+
+<p>func() {<br />
+  local varname="CLASS_${DEFCLASS}_FUNCTIONS"<br />
+  eval "$varname=\"\${$varname}$1 \""<br />
+}</p>
+
+
+
+
+<p>var() {<br />
+  local varname="CLASS_${DEFCLASS}_VARS"<br />
+  eval $varname="\"\${$varname}$1 \""<br />
+}</p>
+
+
+
+
+<p>loadvar() {<br />
+  eval "varlist=\"\$CLASS_${CLASS}_VARS\""<br />
+  for var in $varlist; do<br />
+    eval "$var=\"\$INSTANCE_${THIS}_$var\""<br />
+  done<br />
+}</p>
+
+
+
+
+<p>loadfunc() {<br />
+  eval "funclist=\"\$CLASS_${CLASS}_FUNCTIONS\""<br />
+  for func in $funclist; do<br />
+    eval "${func}() { ${CLASS}::${func} \"\$*\"; return \$?; }"<br />
+  done<br />
+}</p>
+
+
+
+
+<p>savevar() {<br />
+  eval "varlist=\"\$CLASS_${CLASS}_VARS\""<br />
+  for var in $varlist; do<br />
+    eval "INSTANCE_${THIS}_$var=\"\$$var\""<br />
+  done<br />
+}</p>
+
+
+
+
+<p>typeof() {<br />
+  eval echo \$TYPEOF_$1<br />
+}</p>
+
+
+
+
+<p>new() {<br />
+  local<br />
+  local cvar="$2"<br />
+  shift<br />
+  shift<br />
+  local id=$(uuidgen | tr A-F a-f | sed -e "s/-//g")<br />
+  eval TYPEOF_${id}=$class<br />
+  eval $cvar=$id<br />
+  local funclist<br />
+  eval "funclist=\"\$CLASS_${class}_FUNCTIONS\""<br />
+  for func in $funclist; do<br />
+    eval "${cvar}.${func}() { local t=\$THIS; THIS=$id; local c=\$CLASS; CLASS=$class; loadvar; loadfunc; ${class}::${func} \"\$*\"; rt=\$?; savevar; CLASS=\$c; THIS=\$t; return $rt; }"<br />
+  done<br />
+  eval "${cvar}.${class} \"\$*\" || true"<br />
+}</p>
+
+
+
+
+<p># ---------------------------------------------------------------------------<br />
+# Example code<br />
+# ---------------------------------------------------------------------------</p>
+
+
+
+
+<p># class definition<br />
+class Storpel<br />
+  func Storpel<br />
+  func setName<br />
+  func setQuality<br />
+  func print<br />
+  var name<br />
+  var quality</p>
+
+
+
+
+<p># class implementation<br />
+Storpel::Storpel() {<br />
+  setName "$1"<br />
+  setQuality "$2"<br />
+  if [ -z "$name" ]; then setName "Generic"; fi<br />
+  if [ -z "$quality" ]; then setQuality "Normal"; fi<br />
+}</p>
+
+
+
+
+<p>Storpel::setName() { name="$1"; }<br />
+Storpel::setQuality() { quality="$1"; }<br />
+Storpel::print() { echo "$name ($quality)"; }</p>
+
+
+
+
+<p># usage<br />
+new Storpel one "Storpilator 1000" Medium<br />
+new Storpel two<br />
+new Storpel three</p>
+
+
+
+
+<p>two.setName "Storpilator 2000"<br />
+two.setQuality "Strong"</p>
+
+
+
+
+<p>one.print<br />
+two.print<br />
+three.print</p>
+
+
+
+
+<p>echo ""</p>
+
+
+
+
+<p>echo "one: $one ($(typeof $one))"<br />
+echo "two: $two ($(typeof $two))"<br />
+echo "three: $three ($(typeof $two))"
+</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sylvester 在看 数学和向量JS库]]></title>
+    <link href="http://wcweb.github.com/blog/2011/10/05/sylvester-%E5%9C%A8%E7%9C%8B-%E6%95%B0%E5%AD%A6%E5%92%8C%E5%90%91%E9%87%8Fjs%E5%BA%93/"/>
+    <updated>2011-10-05T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2011/10/05/sylvester-在看-数学和向量js库</id>
+    <content type="html"><![CDATA[<p><a href="http://wcweb.us/wordpress/wp-content/uploads/2011/10/sylvester.gif"><img class="aligncenter size-full wp-image-297" title="sylvester" src="http://wcweb.us/wordpress/wp-content/uploads/2011/10/sylvester.gif" alt="" width="314" height="92" /></a></p>
+
+
+
+
+<p><a href="http://sylvester.jcoglan.com/"> Sylvester</a> is a JavaScript library designed to let you do mathematics with vectors and matrices without having to write lots of loops and throw piles of arrays around. It includes classes for modelling vectors and matrices in any number of dimensions, and for modelling infinite lines and planes in 3-dimensional space. It lets you write object-oriented easy-to-read code that mirrors the maths it represents.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Rendering in WebKit]]></title>
+    <link href="http://wcweb.github.com/blog/2011/09/26/rendering-in-webkit/"/>
+    <updated>2011-09-26T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2011/09/26/rendering-in-webkit</id>
+    <content type="html"><![CDATA[<p><object width="290" height="240" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://player.youku.com/player.php/sid/XMTM4ODMyNjAw/v.swf" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="allowscriptaccess" value="always" /><embed width="290" height="240" type="application/x-shockwave-flash" src="http://player.youku.com/player.php/sid/XMTM4ODMyNjAw/v.swf" allowfullscreen="true" quality="high" allowscriptaccess="always" /></object></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Painting in Chromium]]></title>
+    <link href="http://wcweb.github.com/blog/2011/09/26/painting-in-chromium/"/>
+    <updated>2011-09-26T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2011/09/26/painting-in-chromium</id>
+    <content type="html"><![CDATA[<p><object width="290" height="240" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://player.youku.com/player.php/sid/XMTM4ODMyODQw/v.swf" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="allowscriptaccess" value="always" /><embed width="290" height="240" type="application/x-shockwave-flash" src="http://player.youku.com/player.php/sid/XMTM4ODMyODQw/v.swf" allowfullscreen="true" quality="high" allowscriptaccess="always" /></object></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[wp-post-batcher beta & a CMS Template]]></title>
+    <link href="http://wcweb.github.com/blog/2011/09/08/wp-post-batcher-beta-a-new-template/"/>
+    <updated>2011-09-08T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2011/09/08/wp-post-batcher-beta-a-new-template</id>
+    <content type="html"><![CDATA[<p>It was modify from WP Post Corrector. I just focus the relationship between image  and articls;</p>
+
+
+
+
+<p>How to use:</p>
+
+
+
+
+<p>1,upload all picture or product image;</p>
+
+
+
+
+<p>2,install template and plugin</p>
+
+
+
+
+<p>3,just as sample.csv (in the plugin) make your csv</p>
+
+
+
+
+<p>4,use wp-post-bacher upload the articls</p>
+
+
+
+
+<p>Done.</p>
+
+
+
+
+<p>template:<a href="http://wcweb.us/wordpress/wp-content/uploads/2011/09/homejoon.zip">homejoon-template</a></p>
+
+
+
+
+<p>plugin:<a href="http://wcweb.us/wordpress/wp-content/uploads/2011/09/wp-post-batcher.zip">wp-post-batcher beta</a></p>
+
+]]></content>
+  </entry>
+  
+</feed>
