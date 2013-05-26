@@ -4,7 +4,7 @@
   <title><![CDATA[Hello world ~ Chan9ry .ian]]></title>
   <link href="http://wcweb.github.com/atom.xml" rel="self"/>
   <link href="http://wcweb.github.com/"/>
-  <updated>2012-09-16T17:34:13+08:00</updated>
+  <updated>2013-05-26T17:23:57+08:00</updated>
   <id>http://wcweb.github.com/</id>
   <author>
     <name><![CDATA[Chan9ry .ian]]></name>
@@ -368,11 +368,31 @@ mi shi la nu fu,ta ni no,ma ma<br />
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[]]></title>
+    <link href="http://wcweb.github.com/blog/2012/05/04/"/>
+    <updated>2012-05-04T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2012/05/</id>
+    <content type="html"><![CDATA[<p><a href="http://wcweb.us/tmp/guanggongdazhanUFO.mp4">关公大战外星人</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[kat dennings]]></title>
     <link href="http://wcweb.github.com/blog/2012/05/03/390/"/>
     <updated>2012-05-03T00:00:00+08:00</updated>
     <id>http://wcweb.github.com/blog/2012/05/03/390</id>
     <content type="html"><![CDATA[<p><a href="http://wcweb.us/wordpress/wp-content/uploads/2012/05/kat.jpg"><img class="aligncenter size-medium wp-image-391" title="kat dennings" src="http://wcweb.us/wordpress/wp-content/uploads/2012/05/kat-212x300.jpg" alt="kat dennings" width="212" height="300" /></a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RKdM3XmYPEVZOAWt]]></title>
+    <link href="http://wcweb.github.com/blog/2012/04/26/rkdm3xmypevzoawt/"/>
+    <updated>2012-04-26T00:00:00+08:00</updated>
+    <id>http://wcweb.github.com/blog/2012/04/26/rkdm3xmypevzoawt</id>
+    <content type="html"><![CDATA[<p>RKdM3XmYPEVZOAWt</p>
 
 ]]></content>
   </entry>
@@ -700,26 +720,6 @@ echo &#8220;three: $three ($(typeof $two))&#8221;
     <id>http://wcweb.github.com/blog/2011/09/27/准备入手-inkling</id>
     <content type="html"><![CDATA[<p><a href="http://wcweb.us/wordpress/wp-content/uploads/2011/09/inkling.jpg"><img class="aligncenter size-medium wp-image-267" title="inkling" src="http://wcweb.us/wordpress/wp-content/uploads/2011/09/inkling-300x127.jpg" alt="" width="300" height="127" /></a>
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="437" height="288" id="viddler_bf2a6f7e" class="aligncenter"><param name="movie" value="http://www.viddler.com/player/bf2a6f7e/" /><param name="allowScriptAccess" value="always" /><param name="allowFullScreen" value="true" /><embed src="http://www.viddler.com/player/bf2a6f7e/" width="437" height="288" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" name="viddler_bf2a6f7e"></embed></object></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rendering in WebKit]]></title>
-    <link href="http://wcweb.github.com/blog/2011/09/26/rendering-in-webkit/"/>
-    <updated>2011-09-26T00:00:00+08:00</updated>
-    <id>http://wcweb.github.com/blog/2011/09/26/rendering-in-webkit</id>
-    <content type="html"><![CDATA[<p><object width="290" height="240" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://player.youku.com/player.php/sid/XMTM4ODMyNjAw/v.swf" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="allowscriptaccess" value="always" /><embed width="290" height="240" type="application/x-shockwave-flash" src="http://player.youku.com/player.php/sid/XMTM4ODMyNjAw/v.swf" allowfullscreen="true" quality="high" allowscriptaccess="always" /></object></p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Painting in Chromium]]></title>
-    <link href="http://wcweb.github.com/blog/2011/09/26/painting-in-chromium/"/>
-    <updated>2011-09-26T00:00:00+08:00</updated>
-    <id>http://wcweb.github.com/blog/2011/09/26/painting-in-chromium</id>
-    <content type="html"><![CDATA[<p><object width="290" height="240" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://player.youku.com/player.php/sid/XMTM4ODMyODQw/v.swf" /><param name="allowfullscreen" value="true" /><param name="quality" value="high" /><param name="allowscriptaccess" value="always" /><embed width="290" height="240" type="application/x-shockwave-flash" src="http://player.youku.com/player.php/sid/XMTM4ODMyODQw/v.swf" allowfullscreen="true" quality="high" allowscriptaccess="always" /></object></p>
 
 ]]></content>
   </entry>
